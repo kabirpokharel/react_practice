@@ -1,25 +1,28 @@
 import { useState } from "react";
-import {InfniteScroll} from "../public/index.js"
+import { InfniteScroll } from "../public/index.js";
 
-interface ProjectId{
-    projectId:number
+interface ProjectId {
+  projectId: number;
 }
 
-const GetProject = (props:ProjectId) => {
-  const {projectId} = props;
+const GetProject = (props: ProjectId) => {
+  const { projectId } = props;
 
-  switch(projectId){
-    case(1):
-      return <InfniteScroll />
+  switch (projectId) {
+    case 1:
+      return <InfniteScroll />;
     default:
-      return <InfniteScroll />
+      return <InfniteScroll />;
   }
-}
+};
 function App() {
   const [projectId, setProjectID] = useState(0);
 
-  return <>
-  <GetProject {...{projectId}} /></>
+  return (
+    <div>
+      <GetProject {...{ projectId }} />
+    </div>
+  );
 }
 
 export default App;
