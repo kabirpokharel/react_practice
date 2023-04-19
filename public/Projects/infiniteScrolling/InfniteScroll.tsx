@@ -6,6 +6,8 @@ import BookCard from "./BookCard";
 import { debounce } from "lodash";
 import { dummyValue } from "./dummy";
 
+//TODO: follow https://www.youtube.com/watch?v=ASlTFtCjkU8&t=190s for next step i.e filter
+
 const { GetBooks } = BooksApi;
 
 const InfniteScroll = () => {
@@ -16,6 +18,7 @@ const InfniteScroll = () => {
   const [loading, setLoading] = useState(false);
 
   const URL = "http://openlibrary.org/search.json";
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
   };
